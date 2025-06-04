@@ -1,38 +1,40 @@
 # 💳 Loan-Default-Probability  
 ### Machine Learning Classification Project
 
-This project focuses on building and evaluating machine learning models to **predict the probability of loan default**. The objective is to classify loan applicants into **default** or **non-default** categories using historical loan and borrower data.
+This project focuses on building and evaluating machine learning models to **predict the probability of loan default**. The goal is to classify borrowers into **default** or **non-default** categories using historical loan and borrower data.
 
 ---
 
 ## 🧠 Project Overview
 
 - Binary classification task: **Default (1)** vs. **Non-default (0)**
-- Use of structured borrower-level data (e.g., income, credit score, loan amount)
-- Application of supervised machine learning algorithms
-- Evaluation based on classification accuracy, AUC, precision/recall, and confusion matrix
+- Based on structured input features (e.g., income, loan amount, credit score)
+- Comparative analysis of multiple machine learning algorithms
+- Model evaluation using both accuracy and risk-sensitive metrics
 
 ---
 
 ## 📦 Key Steps
 
-- Data preprocessing and feature engineering
+- Data preprocessing and feature transformation
 - Exploratory data analysis (EDA)
 - Model training and validation using:
   - Logistic Regression
+  - K-Nearest Neighbors (KNN)
+  - Decision Tree
+  - Naive Bayes
+  - Multi-Layer Perceptron (MLP)
+  - AdaBoost
   - Random Forest
-  - Gradient Boosting (e.g., XGBoost)
-  - Support Vector Machine (SVM)
-- Hyperparameter tuning and cross-validation
-- Performance comparison and selection of best model
+- Performance benchmarking across models
+- ROC and AUC analysis to assess classification quality
 
 ---
 
 ## 📁 Repository Contents
 
-- `loan_default_model.ipynb` – Main notebook with end-to-end workflow
-- `data/` – Raw and processed datasets (if applicable)
-- `models/` – Serialized models (optional)
+- `loan_default_model.ipynb` – Main notebook with full data pipeline and model training
+- `data/` – Input dataset(s) used in the project
 - `README.md` – Project documentation
 
 ---
@@ -41,9 +43,9 @@ This project focuses on building and evaluating machine learning models to **pre
 
 - Accuracy
 - ROC-AUC Score
-- Precision / Recall / F1 Score
+- Precision, Recall, F1 Score
 - Confusion Matrix
-- Feature Importance
+- Feature Importance (tree-based models)
 
 ---
 
@@ -51,8 +53,8 @@ This project focuses on building and evaluating machine learning models to **pre
 
 - Python 3.8+
 - `pandas`, `numpy`, `matplotlib`, `seaborn`
-- `scikit-learn`, `xgboost`
-- `joblib`, `shap` (optional for model explainability)
+- `scikit-learn`
+- `joblib` (for model export, optional)
 
 ---
 
@@ -68,4 +70,3 @@ Quant Portfolio Manager & PhD Candidate
 ## 📄 License
 
 MIT License — for academic and non-commercial use with proper attribution.
-
